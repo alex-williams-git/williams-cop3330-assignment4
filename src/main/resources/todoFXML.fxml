@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.5" orientation="VERTICAL" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.Controller">
+   <items>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="278.0" prefWidth="924.0">
+         <children>
+            <Button fx:id="addButton" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#addEvent" text="Add List" />
+            <DatePicker fx:id="datePicker" layoutX="106.0" layoutY="10.0" />
+            <TextField fx:id="descriptionTextField" layoutX="351.0" layoutY="10.0" prefHeight="31.0" prefWidth="559.0" promptText="Add List Description" />
+            <Button fx:id="removeButton" layoutX="14.0" layoutY="57.0" mnemonicParsing="false" onAction="#removeList" text="Remove" />
+            <Button fx:id="statusButton" layoutX="106.0" layoutY="57.0" mnemonicParsing="false" onAction="#changeStatus" text="Change Status" />
+            <Button fx:id="clearButton" layoutX="237.0" layoutY="57.0" mnemonicParsing="false" onAction="#clearList" text="Clear List" />
+            <Button fx:id="completeButton" layoutX="14.0" layoutY="100.0" mnemonicParsing="false" onAction="#showComplete" text="Show Complete" />
+            <Button fx:id="incompleteButton" layoutX="157.0" layoutY="100.0" mnemonicParsing="false" onAction="#showIncomplete" text="Show Incomplete" />
+            <Button fx:id="showAllButton" layoutX="310.0" layoutY="100.0" mnemonicParsing="false" onAction="#showAll" text="Show All" />
+            <TextField fx:id="filePathTextField" layoutX="13.0" layoutY="147.0" prefHeight="31.0" prefWidth="559.0" promptText="File Path" />
+            <TextField fx:id="fileNameTextField" layoutX="13.0" layoutY="188.0" prefHeight="31.0" prefWidth="559.0" promptText="File Name" />
+            <Button fx:id="importButton" layoutX="13.0" layoutY="233.0" mnemonicParsing="false" onAction="#importFile" text="Import" />
+            <Button fx:id="exportButton" layoutX="107.0" layoutY="233.0" mnemonicParsing="false" onAction="#exportFile" text="Export" />
+            <Button fx:id="editDescriptionButton" layoutX="336.0" layoutY="57.0" mnemonicParsing="false" onAction="#editDescription" text="Edit Description" />
+            <Button fx:id="editDueDateButton" layoutX="478.0" layoutY="57.0" mnemonicParsing="false" onAction="#editDueDate" text="Edit Due Date" />
+         </children>
+      </AnchorPane>
+      <TabPane prefHeight="304.0" prefWidth="924.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Untitled Tab 1">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableView" layoutX="5.0" layoutY="1.0" prefHeight="260.0" prefWidth="917.0">
+                          <columns>
+                            <TableColumn fx:id="descriptionList" prefWidth="567.0" text="Description" />
+                            <TableColumn fx:id="dateColumn" minWidth="0.0" prefWidth="202.0" text="Date Due" />
+                              <TableColumn fx:id="statusColumn" prefWidth="145.0" text="Status" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Untitled Tab 2">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </items>
+</SplitPane>
